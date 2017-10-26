@@ -1,0 +1,58 @@
+[debug] [2017-10-01T00:22:57.153Z] ----------------------------------------------------------------------
+[debug] [2017-10-01T00:22:57.156Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2017-10-01T00:22:57.156Z] CLI Version:   3.12.0
+[debug] [2017-10-01T00:22:57.157Z] Platform:      darwin
+[debug] [2017-10-01T00:22:57.157Z] Node Version:  v7.10.0
+[debug] [2017-10-01T00:22:57.158Z] Time:          Sat Sep 30 2017 20:22:57 GMT-0400 (EDT)
+[debug] [2017-10-01T00:22:57.158Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-01T00:22:57.205Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-10-01T00:22:57.205Z] > authorizing via signed-in user
+[info] 
+     🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥     🔥🔥🔥     🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥
+     🔥🔥        🔥🔥  🔥🔥     🔥🔥 🔥🔥       🔥🔥     🔥🔥  🔥🔥   🔥🔥  🔥🔥       🔥🔥
+     🔥🔥🔥🔥🔥🔥    🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥   🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥
+     🔥🔥        🔥🔥  🔥🔥    🔥🔥  🔥🔥       🔥🔥     🔥🔥 🔥🔥     🔥🔥       🔥🔥 🔥🔥
+     🔥🔥       🔥🔥🔥🔥 🔥🔥     🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥     🔥🔥  🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/CraigBook/OneDrive/YEAR4/SYSC4927/test-polymer
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2017-10-01T00:23:01.787Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-01T00:23:01.788Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/PJ5AWK5MhkXD64JLLb7ewOCDln9BEu4Oy0PrSikcXDo',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Sep 30 2017 20:23:01 GMT-0400 (EDT)
+[debug] [2017-10-01T00:23:02.134Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-01T00:23:02.167Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+ Sat Sep 30 2017 20:23:02 GMT-0400 (EDT)
+[debug] [2017-10-01T00:23:02.783Z] <<< HTTP RESPONSE 200
+[info] 
+=== Database Setup
+[info] 
+[info] Firebase Realtime Database Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2017-10-01T00:23:20.752Z] >>> HTTP REQUEST GET https://twic-polymer.firebaseio.com/.settings/rules.json  
+ Sat Sep 30 2017 20:23:20 GMT-0400 (EDT)
+[debug] [2017-10-01T00:23:21.259Z] <<< HTTP RESPONSE 200
+[info] ✔  Database Rules for twic-polymer have been downloaded to database.rules.json.
+[info] Future modifications to database.rules.json will update Database Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

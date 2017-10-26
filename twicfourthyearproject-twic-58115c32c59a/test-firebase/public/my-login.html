@@ -1,0 +1,45 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymerfire/firebase-auth.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<dom-module id="my-login">
+  <template>
+    <template is="dom-if" if="[[user]]">
+      <h1>Welcome [[user.displayName]]</h1>
+    </template>
+
+    <firebase-auth id="auth" user="{{user}}" status-known="{{statusKnown}}" provider="google">
+    <paper-button raised on-tap="login" hidden$="[[user]]">Sign in</paper-button>
+    <paper-button raised on-tap="logout" hidden$="[[!user]]">Sign out</paper-button>
+
+    <template is="dom-if" if="[[user]]">
+      <twic-log></twic-log>
+      <twic-users></twic-users>
+    </template>
+  </template>
+  <script>
+    class MyLogin extends Polymer.Element {
+      static get is() { return 'my-login'; }
+      static get properties() {
+       return {
+        user: {
+          type: Object
+        },
+        statusKnown: {
+          type: Object
+        }
+       }; 
+      }
+      //  use for email
+      //  https://howtofirebase.com/firebase-authentication-for-web-d58aad62cf6d
+      login(){
+        // return this.$.auth.signInWithPopUp()
+        return this.$.auth.signInWithPopup();
+      }
+      logout(e){
+        console.log(e);
+        return this.$.auth.signOut(); 
+      }
+    }
+    customElements.define(MyLogin.is, MyLogin);
+  </script>
+</dom-module>

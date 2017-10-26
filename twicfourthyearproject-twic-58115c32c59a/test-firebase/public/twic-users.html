@@ -1,0 +1,109 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/lib/elements/dom-repeat.html">
+
+<link rel="import" href="/bower_components/polymerfire/firebase-auth.html">
+<link rel="import" href="/bower_components/polymerfire/firebase-query.html">
+
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+
+
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+
+
+<dom-module id="twic-users">
+  <template>
+
+    <style>
+    :host{
+      display: block;
+      padding: 10px;
+    }
+    #create { width: 100% }
+    #twic-users-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #twic-users-list li {
+      @apply(--layout-horizontal);
+      @apply(--layout-center;)
+    }
+    #twic-users-list .content {
+      @apply(--layout-flex);
+      padding: 8px;
+    }
+    #twic-users-controls {
+      @apply(--layout-horizontal)
+      @apply(--layout-center-justified)
+    } 
+    </style>
+
+    <firebase-auth user="{{user}}"></firebase-auth>
+    <firebase-query 
+      id="query"
+      path="/users/[[user.uid]]/twic-users"
+      data="{{twic-users}}"
+    >
+    <div id="card">
+      <div id="twic-users">
+        <ul id="twic-users-list">
+          <template is="dom-repeat" items="[[twic-users]]" as="twic-user">
+            <li>
+              <p class="content">
+                [[twic-user.content]]
+              </p>
+              <paper-icon-button icon="clear" user="[[twic-user]]" on-tap="remove"></paper-icon-button>
+            </li>
+          </template>
+        </ul>
+
+        <paper-input id="input" label="Take a note..." on-keypress="enterKeyPressed"></paper-input>
+        <div id="twic-users-controls">
+          <paper-button id="add" on-tap="add">Add</paper-button>
+        </div>
+      </div>
+    </div>
+    </firebase-query>
+  </template>
+
+  <script>
+    class TwicUser extends Polymer.Element {
+      static get is() { return 'twic-users'; }
+      static get properties(){
+        return {
+          users: {
+            type: Object
+          }
+        }
+      }
+
+      add(){
+        // add item in input text box to database
+        this.$.query.ref.push({
+          content: this.$.input.value
+        })
+        // clear texxt field
+        this.$.input.value = null;
+      }
+      
+      enterKeyPressed(e){
+        if(e.which === 13 || e.keyCode === 13){
+          console.log(e)
+          this.add()
+        }
+      }
+
+      /**
+       * Go to database find item that matches the key and delete it
+       */
+      remove(e){
+        let key = e.currentTarget.user.$key;
+        this.$.query.ref.child(key).remove()
+      }
+    }
+    customElements.define(TwicUser.is, TwicUser);
+  </script>
+</dom-module>

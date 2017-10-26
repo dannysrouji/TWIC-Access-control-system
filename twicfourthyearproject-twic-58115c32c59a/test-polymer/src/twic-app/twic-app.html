@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="twic-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class TwicApp extends Polymer.Element {
+      static get is() { return 'twic-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'twic-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(TwicApp.is, TwicApp);
+  </script>
+</dom-module>

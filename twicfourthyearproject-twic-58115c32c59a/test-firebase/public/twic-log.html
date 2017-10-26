@@ -1,0 +1,124 @@
+
+<!-- Load the Polymer.Element base class -->
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/polymer/lib/elements/dom-repeat.html">
+
+<!-- Paper-UI-Elements -->
+<link rel="import" href="/bower_components/paper-card/paper-card.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="/bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="/bower_components/paper-item/paper-item.html">
+<!-- Iron Elements -->
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+
+
+<dom-module id="twic-log">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 16px;
+      }
+
+    </style>
+
+    <h1>User Log</h1>
+     <iron-ajax
+         auto
+         url="user.json"
+         handle-as="json"
+         on-response="handleResponse"
+         ></iron-ajax>
+    <iron-list items="[[userItems]]" as="item">
+      <template>
+        <div>
+          Name:[[item.name]]
+        </div>
+      </template>
+    </iron-list> 
+
+  
+</paper-listbox>
+    <paper-listbox>
+      <template is='dom-repeat' id="users" items="{{userItems}}">
+            <paper-card>
+          <div class="card-content">
+            <div>{{item.name}} logged in {{item.logCount}} times</div>
+            <div>Authentication: {{item.authentication}} </div>
+          </div>
+          <div class="card-actions">
+            <div class="horizontal justified">
+              <paper-icon-button icon="lock"></paper-icon-button>
+              <paper-icon-button on-click="unlock" icon="lock-open"></paper-icon-button>
+              <paper-icon-button on-click="alert" icon="add-alert"></paper-icon-button>
+            </div>
+          </div>
+        </paper-card>
+      </template>
+    </paper-listbox>
+
+  </template> 
+  <script>
+    // Polymer({
+    //   is: 'twic-log'
+    // });
+    class TwicLog extends Polymer.Element {
+      static get is() { return 'twic-log'; }
+
+      static get properties(){
+        return { 
+          userItems: {
+            type: Array,
+            value() {
+              return [
+                {
+                  "name" : "Craig",
+                  "password" : "",
+                  "authentication" : "captain",
+                  "logCount" : 0
+                }
+                ,{
+                  "name" : "Jason",
+                  "password" : "",
+                  "authentication" : "sailor",
+                  "logCount" : 0
+
+                },
+                {
+                  "name" : "Liam",
+                  "password" : "",
+                  "authentication" : "engineer",
+                  "logCount" : 0
+                },
+                {
+                  "name" : "Abi",
+                  "password" : ""
+                  ,"authentication" : "sailor",
+                  "logCount" : 5
+                },
+                {
+                  "name" : "Empty",
+                  "password" : ""
+                  ,"authentication" : "sailor",
+                  "logCount" : 2
+                }
+              ]
+            }
+          }
+        }
+      }
+
+      unlock(e){
+        e.model.set('item.logCount', 0);
+      }
+
+      alert(e){
+        console.log(e.model.item.name + ' your account has been unlocked')
+      }
+    }
+    customElements.define(TwicLog.is, TwicLog);
+  </script>
+</dom-module>

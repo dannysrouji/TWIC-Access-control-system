@@ -1,0 +1,122 @@
+[debug] [2017-10-12T17:27:36.920Z] ----------------------------------------------------------------------
+[debug] [2017-10-12T17:27:36.924Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-10-12T17:27:36.925Z] CLI Version:   3.13.1
+[debug] [2017-10-12T17:27:36.925Z] Platform:      darwin
+[debug] [2017-10-12T17:27:36.925Z] Node Version:  v7.10.0
+[debug] [2017-10-12T17:27:36.926Z] Time:          Thu Oct 12 2017 13:27:36 GMT-0400 (EDT)
+[debug] [2017-10-12T17:27:36.926Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-12T17:27:36.980Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-12T17:27:36.981Z] > authorizing via signed-in user
+[debug] [2017-10-12T17:27:36.983Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-12T17:27:36.984Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/PJ5AWK5MhkXD64JLLb7ewOCDln9BEu4Oy0PrSikcXDo',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Oct 12 2017 13:27:36 GMT-0400 (EDT)
+[debug] [2017-10-12T17:27:37.281Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T17:27:37.302Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/twic-polymer  
+ Thu Oct 12 2017 13:27:37 GMT-0400 (EDT)
+[debug] [2017-10-12T17:27:37.795Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T17:27:37.796Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/twic-polymer/tokens  
+ Thu Oct 12 2017 13:27:37 GMT-0400 (EDT)
+[debug] [2017-10-12T17:27:38.150Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/CraigBook/OneDrive/YEAR4/SYSC4927/test-firebase'...
+[info] 
+[debug] [2017-10-12T17:27:38.156Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/twic-polymer  
+ Thu Oct 12 2017 13:27:38 GMT-0400 (EDT)
+[debug] [2017-10-12T17:27:39.581Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T17:27:39.582Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/292360635146/clients/_:getWebAppConfig  
+ Thu Oct 12 2017 13:27:39 GMT-0400 (EDT)
+[debug] [2017-10-12T17:27:39.986Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2017-10-12T23:50:16.554Z] ----------------------------------------------------------------------
+[debug] [2017-10-12T23:50:16.556Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-10-12T23:50:16.557Z] CLI Version:   3.13.1
+[debug] [2017-10-12T23:50:16.557Z] Platform:      darwin
+[debug] [2017-10-12T23:50:16.557Z] Node Version:  v7.10.0
+[debug] [2017-10-12T23:50:16.558Z] Time:          Thu Oct 12 2017 19:50:16 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:16.558Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-12T23:50:16.639Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-12T23:50:16.640Z] > authorizing via signed-in user
+[debug] [2017-10-12T23:50:16.644Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-12T23:50:16.645Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/PJ5AWK5MhkXD64JLLb7ewOCDln9BEu4Oy0PrSikcXDo',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Oct 12 2017 19:50:16 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:17.028Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T23:50:17.045Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/twic-polymer  
+ Thu Oct 12 2017 19:50:17 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:17.693Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T23:50:17.701Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/twic-polymer/tokens  
+ Thu Oct 12 2017 19:50:17 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:18.134Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/CraigBook/OneDrive/YEAR4/SYSC4927/twic/test-firebase'...
+[info] 
+[debug] [2017-10-12T23:50:18.139Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/twic-polymer  
+ Thu Oct 12 2017 19:50:18 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:18.677Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T23:50:18.678Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/292360635146/clients/_:getWebAppConfig  
+ Thu Oct 12 2017 19:50:18 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:19.065Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2017-10-12T23:50:19.157Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/twic-polymer  
+ Thu Oct 12 2017 19:50:19 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:19.440Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T23:50:19.442Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/292360635146/clients/_:getWebAppConfig  
+ Thu Oct 12 2017 19:50:19 GMT-0400 (EDT)
+[debug] [2017-10-12T23:50:19.692Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5004
+
+[debug] [2017-10-24T17:34:45.713Z] ----------------------------------------------------------------------
+[debug] [2017-10-24T17:34:45.722Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-10-24T17:34:45.724Z] CLI Version:   3.13.1
+[debug] [2017-10-24T17:34:45.724Z] Platform:      darwin
+[debug] [2017-10-24T17:34:45.724Z] Node Version:  v7.10.0
+[debug] [2017-10-24T17:34:45.725Z] Time:          Tue Oct 24 2017 13:34:45 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:45.725Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-24T17:34:45.798Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-24T17:34:45.799Z] > authorizing via signed-in user
+[debug] [2017-10-24T17:34:45.803Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-24T17:34:45.804Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/PJ5AWK5MhkXD64JLLb7ewOCDln9BEu4Oy0PrSikcXDo',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Oct 24 2017 13:34:45 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:46.184Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-24T17:34:46.203Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/twic-polymer  
+ Tue Oct 24 2017 13:34:46 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:46.571Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-24T17:34:46.572Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/twic-polymer/tokens  
+ Tue Oct 24 2017 13:34:46 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:47.053Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/CraigBook/OneDrive/YEAR4/SYSC4927/twic/test-firebase'...
+[info] 
+[debug] [2017-10-24T17:34:47.058Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/twic-polymer  
+ Tue Oct 24 2017 13:34:47 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:47.362Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-24T17:34:47.363Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/292360635146/clients/_:getWebAppConfig  
+ Tue Oct 24 2017 13:34:47 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:47.622Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2017-10-24T17:34:47.722Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/twic-polymer  
+ Tue Oct 24 2017 13:34:47 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:48.024Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-24T17:34:48.025Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/292360635146/clients/_:getWebAppConfig  
+ Tue Oct 24 2017 13:34:48 GMT-0400 (EDT)
+[debug] [2017-10-24T17:34:48.200Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5004
+

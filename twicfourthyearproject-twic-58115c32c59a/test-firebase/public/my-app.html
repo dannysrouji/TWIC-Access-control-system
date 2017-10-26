@@ -1,0 +1,30 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymerfire/firebase-app.html">
+<link rel="import" href="my-login.html">
+<link rel="import" href="twic-log.html">
+<link rel="import" href="twic-users.html">
+
+<dom-module id="my-app">
+  <template>
+    <h2>Hello !</h2>
+
+  <firebase-app
+    id="firebase"
+    auth-domain="twic-polymer.firebaseapp.com"
+    database-url="https://twic-polymer.firebaseio.com/"
+    api-key="AIzaSyDQlSOcyXeLzrylLwzen55N3l5MYLHTi9k">
+</firebase-app>
+<my-login></my-login>
+</template>
+
+  <script>
+    // Polymer({
+    //   is: 'my-app'
+    // });
+    class MyApp extends Polymer.Element {
+      static get is() { return 'my-app'; }
+    }
+    customElements.define(MyApp.is, MyApp);
+  </script>
+
+</dom-module>
